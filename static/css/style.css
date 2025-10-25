@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image {
+    margin: auto;
+    width: 350px;
+}
+
+.image img {
+    width: 350px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header{
+    height: 80px;
+    background-color: #37517e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    width: 120px;
+}
+
+.logo img{
+    width: 120px;
+
+}
+
+.title a{
+    text-decoration: none;
+}
+
+.title a h1{
+    color: white;
+}
+
+.title a h1:hover{
+    color: #73c5eb;
+    transition: 0.3s;
+}
+
+
+.main{
+    width: 100%;
+    display: flex;
+    /* height: 88.4vh; */
+}
+
+/*--------------------------------------------------------------
+# Side Navigation
+--------------------------------------------------------------*/
+
+.side-nav{
+    background: #2f323a;
+    margin-top: 1px;
+    width: 15%;
+    height: 90vh;
+    transition: 0.5s;
+}
+
+.side-nav a{
+    color: #fff;
+    background: #37517e;
+    width: 100%;
+    line-height: 50px;
+    font-size: 18px;
+    border: 1px solid black;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.side-nav a:hover{
+    background: #47b2e4;
+    color: #22242a;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.side-nav i span{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+}
+
+.side-nav .active-sidebar{
+    background: #47b2e4;
+    color: #22242a;
+}
+
+/*--------------------------------------------------------------
+# Dashbord
+--------------------------------------------------------------*/
+
+.cards{
+    height: 100px;
+}
+
+.text-none {
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer{
+    font-size: 14px;
+    background: #37517e;
+}
+  
+#footer .footer-bottom{
+    padding: 29px;
+    color: #fff;
+}
+  
+#footer .credits a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: #47b2e4;
+}
+
+
+.check{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#p:checked{
+    accent-color: green;
+}
+
+#a:checked{
+    accent-color: red;
+}

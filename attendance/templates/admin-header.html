@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <!-- Favicons -->
+    <link href="/static/image/logo.jpg" rel="icon">
+
+    <!-- CSS File -->
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- JS File -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/jQuery.js" async></script>
+    <script src="/static/js/main.js" async></script>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+
+    <header class="sticky-top">
+        <div class="logo">
+            <img src="/static/image/logo.jpg" alt="">
+        </div>
+        <div class="title">
+            <a href="{% url 'admin-home' %}">
+                <h1>
+                    Student E R P
+                </h1>
+            </a>
+        </div>
+        <div>
+            <a class="btn btn-info" data-bs-toggle="modal" data-bs-target="#adminProfile">
+                <i class="fa-solid fa-user"></i>
+                <span>Admin</span>
+            </a>
+            <a href="{% url 'logout' %}" class="btn btn-info">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Log out</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Modal for Admin Profile -->
+    <div class="modal fade" id="adminProfile">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Admin Profile</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            Role:
+                        </div>
+                        <div class="col-8">
+                            Admin
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            Name:
+                        </div>
+                        <div class="col-8">
+                            <b>{{adminName}}</b>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            Gmail Id:
+                        </div>
+                        <div class="col-8">
+                            {{adminGmailId}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            Mobile Number:
+                        </div>
+                        <div class="col-8">
+                            {{adminMobileNo}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- ======= End Header ======= -->
+
+    <!-- ======= Side Navigation ======= -->
+
+    <div class="main">
+
+        <div class="side-nav">
+            <a class="btn {% if request.path == '/admin-home/' %} active-sidebar {% endif %}"
+                href="{% url 'admin-home' %}">
+                <i class="fa-solid fa-gauge-high">
+                    <span>Dashboard</span>
+                </i>
+            </a>
+            <a class="btn {% if request.path == '/admin-attendance/' %} active-sidebar {% endif %}"
+                href="{% url 'admin-attendance' %}">
+                <i class="fa-regular fa-circle">
+                    <span>Attendance</span>
+                </i>
+            </a>
+            <a class="btn {% if request.path == '/admin-department/' %} active-sidebar {% endif %}"
+                href="{% url 'admin-department' %}">
+                <i class="fa-regular fa-circle">
+                    <span>Department</span>
+                </i>
+            </a>
+            <a class="btn {% if request.path == '/admin-course/' %} active-sidebar {% endif %}"
+                href="{% url 'admin-course' %}">
+                <i class="fa-regular fa-circle">
+                    <span>Course</span>
+                </i>
+            </a>
+            <a class="btn {% if request.path == '/admin-faculty/' %} active-sidebar {% endif %}"
+                href="{% url 'admin-faculty' %}">
+                <i class="fa-regular fa-circle">
+                    <span>Faculty</span>
+                </i>
+            </a>
+            <a class="btn {% if request.path == '/admin-subject/' %} active-sidebar {% endif %}"
+                href="{% url 'admin-subject' %}">
+                <i class="fa-regular fa-circle">
+                    <span>Subject</span>
+                </i>
+            </a>
+            <a class="btn {% if request.path == '/admin-student/' %} active-sidebar {% endif %}"
+                href="{% url 'admin-student' %}">
+                <i class="fa-regular fa-circle">
+                    <span>Student</span>
+                </i>
+            </a>
+        </div>
+
+        <!-- ======= End Side Navigation ======= -->
